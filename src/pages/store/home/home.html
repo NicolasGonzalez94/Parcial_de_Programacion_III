@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FoodStore</title>
+
+    </head>
+    <body>
+        <header>
+            <h1>Food Store</h1>
+            <nav>
+                <a href="index.html">Inicio</a><br>
+                <a href="cart.html">Carrito</a><br>
+                
+            </nav>
+        </header>
+        <main>
+            <form>
+                    <label for="producto">Buscar productos</label>
+                    <input type="text" id="producto" name="producto" placeholder="ej: Hamburguesas">
+                    <button type="submit">Buscar</button>
+                </form>
+            <div id="categorias"></div>
+            <div id="productos"></div>
+        </main>
+        <script type="module" src="./home.ts"></script>
+    </body>
+
+</html>
