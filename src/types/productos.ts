@@ -1,14 +1,13 @@
-export interface productos {
-    id: string;
-    eliminado: boolean;
-    nombre: string;
-    precio: number;
-    descripcion: string;
-    stock: number;
-    categorias: ICategory[];
-}
-
-export interface CartItem {
-    product: productos;   
-    cantidad: number;   
-}
+import type { ICategory } from "./categoria"
+export type Product = {
+    id: number,
+    eliminado: boolean,
+    createdAt: string,
+    nombre: string,
+    precio: number,
+    descripcion: string,
+    stock: number,
+    imagen: string,
+    disponible: boolean,
+    categorias: ICategory[],
+} 
