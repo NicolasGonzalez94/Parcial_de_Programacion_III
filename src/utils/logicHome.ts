@@ -1,4 +1,5 @@
 import { categorias, PRODUCTS } from "../data/data";
+import { agregarAlCarrito } from "./logicCart";
 
 const main = document.getElementById("main");
 
@@ -23,6 +24,12 @@ export function cargarPag() {
                     "<p>Descripcion: " + p.descripcion + "</p>" +
                     "<p>Precio: " + p.precio + "</p>" +
                     "<p>Stock: " + p.stock + "</p>";
+                const btn = document.createElement("button");
+                btn.textContent = "Agregar al carrito";
+                btn.addEventListener("click", () => {
+                    agregarAlCarrito(p);
+                });
+                div.appendChild(btn);
                 section.appendChild(div);
                 div.className = "product-card";
             }
@@ -43,6 +50,12 @@ export function buscarProducto(s: string) {
                 "<p>Descripcion: " + p.descripcion + "</p>" +
                 "<p>Precio: " + p.precio + "</p>" +
                 "<p>Stock: " + p.stock + "</p>";
+            const btn = document.createElement("button");
+            btn.textContent = "Agregar al carrito";
+            btn.addEventListener("click", () => {
+                agregarAlCarrito(p);
+            });
+            div.appendChild(btn);
             main?.appendChild(div);
             div.className = "product-card";
         } else {
@@ -96,6 +109,12 @@ export function cargarNav() {
                         "<p>Descripcion: " + p.descripcion + "</p>" +
                         "<p>Precio: " + p.precio + "</p>" +
                         "<p>Stock: " + p.stock + "</p>";
+                    const btn = document.createElement("button");
+                    btn.textContent = "Agregar al carrito";
+                    btn.addEventListener("click", () => {
+                        agregarAlCarrito(p);
+                    });
+                    div.appendChild(btn);
 
 
                     div.className = "product-card";
