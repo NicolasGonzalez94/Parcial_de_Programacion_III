@@ -1,32 +1,26 @@
-import { categorias, PRODUCTS } from "../../../data/data";
+import { cargarNav, cargarPag } from "../../../utils/logicHome";
+import { buscarProducto } from "../../../utils/logicHome";
 
-const main = document.getElementById("main");
-
-
-
-for (const c of categorias) {
-
-    const section = document.createElement("section");
-    section.innerHTML = "<h3>" + c.nombre + "</h3>";
-    main?.appendChild(section);
-    section.className = "categoria"
+cargarNav ();
+cargarPag();
 
 
-    for (const p of PRODUCTS) {
 
 
-        const div = document.createElement("div");
-        if (c.nombre === p.categorias[0].nombre) {
-            div.innerHTML = "<h4>" + p.nombre + "</h4>"+ "<p>Descripcion: "+ p.descripcion+"</p>" +"<p>Precio: "+ p.precio+"</p>"+"<p>Stock: "+ p.stock+"</p>";
-            section.appendChild(div);
-            div.className = "product-card";
-        }
+const form = document.getElementById("search") as HTMLFormElement;
+
+form?.addEventListener("submit", (event: Event) => {
+    event.preventDefault();
+    
+    const formData= new FormData(form);
+
+    const input= formData.get("producto") as string;
+    
+    if (input!=null) {
+        buscarProducto(input);
+        
+        
+
     }
-
 }
-
-cuando clickea en buscar nombre === nombre de producto
-
-
-
-
+);
