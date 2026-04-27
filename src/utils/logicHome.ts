@@ -28,6 +28,7 @@ export function cargarPag() {
                 btn.textContent = "Agregar al carrito";
                 btn.addEventListener("click", () => {
                     agregarAlCarrito(p);
+                    alert(`${p.nombre} agregado al carrito`);
                 });
                 div.appendChild(btn);
                 section.appendChild(div);
@@ -54,6 +55,7 @@ export function buscarProducto(s: string) {
             btn.textContent = "Agregar al carrito";
             btn.addEventListener("click", () => {
                 agregarAlCarrito(p);
+                alert(`${p.nombre} agregado al carrito`);
             });
             div.appendChild(btn);
             main?.appendChild(div);
@@ -113,6 +115,7 @@ export function cargarNav() {
                     btn.textContent = "Agregar al carrito";
                     btn.addEventListener("click", () => {
                         agregarAlCarrito(p);
+                        alert(`${p.nombre} agregado al carrito`);
                     });
                     div.appendChild(btn);
 
