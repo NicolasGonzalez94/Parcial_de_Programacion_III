@@ -60,9 +60,7 @@ export function buscarProducto(s: string) {
             div.appendChild(btn);
             main?.appendChild(div);
             div.className = "product-card";
-        } else {
-            encontrado = false;
-        }
+        } 
 
     }
     if (encontrado === false) {
